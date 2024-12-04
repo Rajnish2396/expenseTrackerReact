@@ -1,0 +1,106 @@
+*{
+  box-sizing:border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin:0;
+  padding:0;
+}
+:root{
+  ---bgPrimary:#fff;
+  ---textPrimary:#000;
+  ---textLight:#0e0e60;
+  ---warnColor:red;
+
+  --bgSecondary:#000;
+  --textSecondary:#fff;
+  
+  ---shadowPrimary:0px 0px 4px 0px #ccc;
+  ---borderPrimary:solid 1px #ccc;
+
+  ---fSHeader:30px;
+  ---fsLighter:16px;
+  ---fsSmaller:14px;
+
+}
+body{
+  margin:0;
+  padding:0;
+  background:var(---bgPrimary);
+}
+header{
+  text-align:center;
+  background:var(---bgPrimary);
+  color:var(---textPrimary);
+  font-weight:bold;
+  padding:25px 0;
+  margin-bottom:80px;
+  box-shadow:var(---shadowPrimary);
+  font-size: var(---fSHeader);
+  text-transform:uppercase;
+  
+}
+.expensiveContainer{
+  max-width:1200px;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:30px;
+  margin:auto;
+}
+.tableContainer{
+  box-shadow:var(---shadowPrimary);
+  overflow: hidden;
+  padding:5px;
+}
+.tableContainer table{
+  width:100%;
+}
+.tableContainer table thead tr th{
+  background:var(--bgSecondary);
+  color:var(--textSecondary);
+  font-size:var(---fsLighter);
+  text-align: left;
+  padding: 6px 15px;
+  font-weight:normal;
+}
+.tableContainer table thead svg{
+  fill:var(---bgPrimary);
+  margin-left:5px;
+}
+.tableContainer table tbody tr td{
+  border-bottom:var(---borderPrimary);
+  border-left:var(---borderPrimary);
+  padding:7px;
+  font-size:var(---fsSmaller);
+}
+.tableContainer tr td:last-child{
+  border-right:var(---borderPrimary);
+}
+.tableContainer tr:last-child th{
+  padding-top:8px;
+  padding-bottom:8px;
+  text-align:left;
+  font-size:var(---fsSmaller);
+}
+
+/* Form Css */
+form.expense-form{
+  display:grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap:15px;
+}
+.input-container{
+  display:grid;
+  gap:10px;
+}
+.input-container input, .input-container select{
+  padding:5px 10px;
+}
+.input-container label{
+ color:var(---warnColor);
+ font-size:var(---fsSmaller);
+}
+.add-btn{
+  max-width:150px;
+  padding:10px;
+  background: var(--bgSecondary);
+  color: var(--textSecondary);
+}
